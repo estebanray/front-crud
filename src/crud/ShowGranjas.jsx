@@ -39,10 +39,10 @@ const CompShowGranjas = () => {
                                 <tr key={granja.id}>
                                     <td>{ granja.nombre }</td>
                                     <td>{ granja.precio }</td>
-                                    <td>{ granja.categoria_id }</td>
+                                    <td>{ granja.categoria.categoria }</td>
                                     <td>
                                         <Link to={`/edit/${granja.id}`} className="btn btn-warning">Editar</Link>
-                                        <button onClick={ ()=> deleteGranja(granja.id)} className="btn btn-danger">Eliminar</button>
+                                        <button onClick={ ()=> deleteGranja(granja.id)} className="btn btn-danger m-1">Eliminar</button>
                                     </td>
                                 </tr>
                             ))}

@@ -8,6 +8,8 @@ const CompCreateGranja = () => {
     const [nombre, setNombre] = useState('');
     const [precio, setPrecio] = useState('');
     const [categoria, setCategoria] = useState('');
+
+
     const navigate = useNavigate(); 
 
     const store = async (e) => {
@@ -18,7 +20,7 @@ const CompCreateGranja = () => {
 
     return(
         <div>
-            <h3>Create POST</h3>
+            <h3>Agregar Producto</h3>
             <form onSubmit={store}>
                 <div className="mb-3">
                     <label className="form-label">Nombre</label>
@@ -31,13 +33,24 @@ const CompCreateGranja = () => {
                     type="text" className="form-control"/>
                 </div>
                 <div className="mb-3">    
-                    <label className="form-label">Categoria</label>
-                    <input value={categoria} onChange={ (e)=> setCategoria(e.target.value)} 
-                    type="text" className="form-control"/>
+                    <label htmlFor="categoria">Categoría:</label>
+                    <select
+                        className="form-select"
+                        id="categoria"
+                        value={categoria}
+                        onChange={(e) => setCategoria(e.target.value)}
+                    >
+                        <option value="">-- Elige una opción --</option>
+                        <option value="1">verdura</option>
+                        <option value="2">fruta</option>
+                    </select>
                 </div>
-                <button type="submit" className="btn btn-success">Agregar</button>
+
+                <button type="submit" className="btn btn-success m-4">Agregar</button>
+
             </form>
         </div>
+
     )
 }
 

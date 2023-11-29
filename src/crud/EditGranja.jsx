@@ -34,7 +34,7 @@ const CompEditGranja = () => {
 
     return (
         <div>
-        <h3>Edit POST</h3>
+        <h3>Editar Producto</h3>
         <form onSubmit={update}>
             <div className="mb-3">
                 <label className="form-label">Nombre</label>
@@ -47,11 +47,19 @@ const CompEditGranja = () => {
                 type="text" className="form-control"/>
             </div>
             <div className="mb-3">    
-                <label className="form-label">Categoria</label>
-                <input value={categoria} onChange={ (e)=> setCategoria(e.target.value)} 
-                type="text" className="form-control"/>
-            </div>
-            <button type="submit" className="btn btn-primary">Agregar</button>
+                    <label htmlFor="categoria">Categoría:</label>
+                    <select
+                        className="form-select"
+                        id="categoria"
+                        value={categoria}
+                        onChange={(e) => setCategoria(e.target.value)}
+                    >
+                        <option value="">-- Elige una opción --</option>
+                        <option value="1">verdura</option>
+                        <option value="2">fruta</option>
+                    </select>
+                </div>
+            <button type="submit" className="btn btn-primary">Editar</button>
         </form>
     </div>
     )
