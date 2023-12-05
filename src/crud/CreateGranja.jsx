@@ -15,13 +15,13 @@ const CompCreateGranja = () => {
     const store = async (e) => {
         e.preventDefault()
         await axios.post(URL, {nombre:nombre, precio:precio, categoria_id:categoria})
-        navigate('/')
+        navigate('/admin')
     }
 
     return(
         <div>
             <h3>Agregar Producto</h3>
-            <form onSubmit={store}>
+            <form onSubmit={store} className="m-5">
                 <div className="mb-3">
                     <label className="form-label">Nombre</label>
                     <input value={nombre} onChange={ (e)=> setNombre(e.target.value)} 

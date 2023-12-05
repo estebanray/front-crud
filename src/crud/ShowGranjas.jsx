@@ -21,12 +21,13 @@ const CompShowGranjas = () => {
     }
     
     return(
-        <div className="container">
-            <div className="row">
-                <div className="col">
+            <div className="container" style={{ backgroundColor: 'aliceblue' }}>
+            <a href="/" className="btn btn-secondary">Volver</a>
+            <div className="row" >
+                <div className="col" >
                     <Link to="/create" className="btn btn-success mt-2 mb-2">Agregar Producto</Link>
-                    <table className="table">
-                        <thead className="table-dark">
+                    <table className="table" >
+                        <thead className="table-dark" >
                             <tr>
                                 <th>Nombre</th>
                                 <th>Precio</th>

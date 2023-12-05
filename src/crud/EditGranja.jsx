@@ -18,7 +18,7 @@ const CompEditGranja = () => {
             precio: precio,
             categoria_id: categoria
         })
-        navigate('/')
+        navigate('/admin')
     }
 
     useEffect(()=>{
@@ -35,7 +35,7 @@ const CompEditGranja = () => {
     return (
         <div>
         <h3>Editar Producto</h3>
-        <form onSubmit={update}>
+        <form onSubmit={update} className="m-5">
             <div className="mb-3">
                 <label className="form-label">Nombre</label>
                 <input value={nombre} onChange={ (e)=> setNombre(e.target.value)} 
