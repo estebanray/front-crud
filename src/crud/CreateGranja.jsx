@@ -21,7 +21,8 @@ const CompCreateGranja = () => {
     return(
         <div>
             <h3>Agregar Producto</h3>
-            <form onSubmit={store} className="m-5">
+
+            <form onSubmit={store}>
                 <div className="mb-3">
                     <label className="form-label">Nombre</label>
                     <input value={nombre} onChange={ (e)=> setNombre(e.target.value)} 

@@ -35,7 +35,7 @@ const CompEditGranja = () => {
     return (
         <div>
         <h3>Editar Producto</h3>
-        <form onSubmit={update} className="m-5">
+        <form onSubmit={update}>
             <div className="mb-3">
                 <label className="form-label">Nombre</label>
                 <input value={nombre} onChange={ (e)=> setNombre(e.target.value)} 
